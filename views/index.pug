@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  ul
+  each concert in concerts
+      h2: a(href='/event/' + concert.eventDateName)= concert.eventDateName
+      p= concert.dateOfShow
+      img(src=concert.imageSource)
